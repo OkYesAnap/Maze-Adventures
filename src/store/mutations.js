@@ -24,6 +24,9 @@ export const hideOrShowItemWindow = state => {
 export const ShowDialogWindow = state => {
   state.dialogWindow = true
 }
+export const loadNewState = (state, {key, value}) => {
+  JSON.parse(localStorage.getItem(key, JSON.stringify(value)))
+}
 export const hideOrShowInventory = state => {
   state.openInventory = !state.openInventory
 }
